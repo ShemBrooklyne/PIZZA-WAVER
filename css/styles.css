@@ -1,0 +1,57 @@
+.main-page {
+    background-image: url("../assets/backgrounds/welcome.jpg");
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 760px;
+    
+}
+
+.welcome {
+    font-family: 'Ultra', serif;
+    font-size: 78px;
+}
+
+li>a {
+    color: seashell;
+}
+
+li > a:hover {
+    color: red;
+}
+
+.pizza-waver {
+    background-image: url("../assets/backgrounds/pizza-waver.jpg");
+    background-size: cover;
+    height: 760px;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: 'Ultra', serif;
+    font-size: 78px;
+}
+
+/* #orders {
+    background-color: white;
+    color: black;
+    height: 760px;
+} */
+
+/* #contact-us {
+    background-image: url("../assets/backgrounds/Contacts\ us\ page.jpg");
+    background-size: cover;
+    height: 560px;
+} */
+
+.menu {
+    float: right;
+}
+img {
+    position: absolute;
+}
+
+.cap {
+    position: relative;
+    margin-top: 5px;
+    text-align: center;
+}
