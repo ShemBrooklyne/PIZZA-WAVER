@@ -39,7 +39,7 @@
                 <h1 class="text-center text-white welcome">Pizza Deli</h1>
 
                 <h2 class="text-center text-white">Are You Hungry?</h2>
-                <a href="#orders"><button type="button" class="btn btn-success btn-g">Order Now!</button></a>
+                <a href="#orders"><button type="button" class="btn btn-success btn-g animation">Order Now!</button></a>
             </div>
         </div> <br>
 
@@ -87,8 +87,8 @@
 
                     <div class="col-md-3 p-2">
                         <div class="card mb-2">
-                            <img class="card-img-top "
-                                src="./assets/pizza/Hawaiian-BBQ-Chicken-PIzza-new-500x375.jpg" alt="" >
+                            <img class="card-img-top " src="./assets/pizza/Hawaiian-BBQ-Chicken-PIzza-new-500x375.jpg"
+                                alt="">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Hawaiian-BBQ-Chicken-PIzza</h5>
                             </div>
@@ -126,8 +126,7 @@
 
                     <div class="col-md-3 p-2">
                         <div class="card mb-2">
-                            <img class="card-img-top "
-                                src="./assets/pizza/veggie-feast2.jpg" alt="">
+                            <img class="card-img-top " src="./assets/pizza/veggie-feast2.jpg" alt="">
                             <div class="card-body">
                                 <h5 class="card-title text-center">veggie-feast</h5>
                             </div>
@@ -149,10 +148,10 @@
 
 
         <div id="orders" class="orders"><br><br>
-            <div class="container-fluid ">
+            <div class="container-fluid">
                 <h1 class="text-center text-white">PLace Your Orders</h1>
-                <select class="form-control form-control-sm">
-                    <option class="text-center" value="">
+                <select class="form-control form-control-sm" id="type">
+                    <option class="text-center" value="default">
                         <h3><strong>🍕Select Pizza Type🍕</strong></h3>
                     </option>
                     <option>Chicken Hawaiian.</option>
@@ -164,70 +163,66 @@
                     <option>Roast Veg & Feta.</option>
                     <option>Spicy Boerewors.</option>
                 </select> <br>
-                <select class="form-control form-control-sm">
+                <select class="form-control form-control-sm" id="size">
                     <option class="text-center">
                         <h3><strong>Select Piece Size👨🏽‍🍳</strong></h3>
                     </option>
-                    <option>Large @Ksh.1,500</option>
-                    <option>Medium @Ksh.1,150</option>
-                    <option>Small @Ksh.900</option>
+                    <option value="large">Large @Ksh.1,500</option>
+                    <option value="medium">Medium @Ksh.1,150</option>
+                    <option value="small">Small @Ksh.900</option>
                 </select> <br>
-                <select class="form-control form-control-sm">
+                <select class="form-control form-control-sm" id="crust">
                     <option class="text-center">
                         <h3> <strong>Select Crust</strong></h3>
                     </option>
-                    <option>Cheese-Stuffed Crust @Ksh.100 </option>
-                    <option>Pizza Bagels @Ksh.110</option>
-                    <option>Flatbread @Ksh.90</option>
-                    <option>Thin Crust @Ksh.70</option>
-                    <option>Sicilian Style @Ksh.50</option>
-                    <option>Chicago Deep Dish @Ksh.100</option>
-                    <option>Neapolitan Crust @Ksh.120</option>
-                    <option>NY Style Pizza @Ksh.100</option>
+                    <option value="cheese">Cheese-Stuffed Crust @Ksh.100 </option>
+                    <option value="thin">Thin Crust @Ksh.70</option>
+                    <option value="neapolitan">Neapolitan Crust @Ksh.120</option>
                 </select><br>
-                <select class="form-control form-control-sm">
-                    <option class="text-center">
-                        <h3> <strong>Choose Preferable Topping</strong></h3>
-                    </option>
-                    <option>Pepperoni. @Ksh.10</option>
-                    <option>Mushrooms. @Ksh.40</option>
-                    <option>Onions. @Ksh.15</option>
-                    <option>Sausage. @Ksh.20</option>
-                    <option>Bacon. @Ksh.30</option>
-                    <option>Extra cheese. @Ksh10</option>
-                    <option>Black olives. @Ksh.15</option>
-                    <option>Green peppers. @Ksh.5</option>
-                </select><br>
-                &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-danger">Place Order</button>
 
-
+                <div class="container-fluid">
+                    <label for="">
+                        <h3 class="text-white"><strong>Choose Preferable Topping</strong></h3>
+                    </label>
+                    <div class="row">
+                        <div class="checkbox col-md-12 text-white" id="toppings">
+                            <input type="checkbox" value="Pepperoni">Pepperoni. @Ksh.10&nbsp; &nbsp;
+                            <input type="checkbox" value="Mushrooms">Mushrooms. @Ksh.40 <br>
+                            <input type="checkbox" value="Onions">Onions. @Ksh.15 &nbsp; &nbsp; &nbsp;
+                            &nbsp;
+                            <input type="checkbox" value="Sausage">Sausage. @Ksh.20 <br>
+                            <input type="checkbox" value="Bacon">Bacon. @Ksh.30 &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp;
+                            <input type="checkbox" value="Extra-cheese">Extra cheese. @Ksh10<br>
+                            <input type="checkbox" value="Black-olives">Black olives. @Ksh.15
+                            <input type="checkbox" value="Green-peppers">Green peppers. @Ksh.5
+                        </div>
+                    </div>
+                </div> <br>
+                &nbsp; &nbsp; &nbsp; <button type="submit" id="checkout" class="btn btn-danger">Place Order</button>
             </div>
+
         </div><br>
+
+
         <!-- Site footer -->
         <footer id="footer" class="site-footer container-fluid">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <h6>About</h6>
-                        <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help
-                            the upcoming programmers with the code. Scanfcode focuses on providing the most efficient
-                            code or snippets as the code wants to be simple. We will help programmers build up concepts
-                            in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap,
-                            JavaScript, PHP, Android, SQL and Algorithm.</p>
+                        <p class="text-justify">Pizza Deli is an inn located within Kasarani that brings to you
+                            Pizza-Waver which
+                            is a user interactive site <br>
+                            that allows one to place their pizza orders <strong>Online!</strong></p>
+
+                        <p class="text-justify">With varieties of Pizza types, placing orders will be more easier and
+                            faster.
+                            <br>
+                            So, what are you waiting for? Are you ready to order yet?</p>
                     </div>
 
-                    <div class="col-xs-6 col-md-3">
-                        <h6>Categories</h6>
-                        <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                            <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-                        </ul>
-                    </div>
-
+                    &nbsp; &nbsp;
                     <div class="col-xs-6 col-md-3">
                         <h6>Quick Links</h6>
                         <ul class="footer-links">

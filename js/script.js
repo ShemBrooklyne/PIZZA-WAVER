@@ -1,33 +1,93 @@
-// window.onscroll = function() {
-//     myFunction();
-// }
+function size(name) {
+    this.sizeName = name;
+}
 
-// var navbar = document.getElementById("nav-bar");
-// var sticky = navbar.offsetTop;
+size.prototype.priceSize = function() {
+    if (this.sizeName === "large") {
+        // alert("Large");
+        return 1500;
+    } else if(this.sizeName === "medium") {
+        // alert("Not large");
+        return 1150;
+    } else if(this.sizeName === "small") {
+        return 900;
+    } else {
+        alert("Please select a pizza size");
+    }
+}
 
-// function myFunction() {
-//     if (window.pageYOffset >= sticky) {
-//     }else {
-//         navbar.classList.remove("sticky");
-//     }
-// }
+function crust(name) {
+    this.crustName = name;
+}
 
-var slideIndex = 0;
-showSlides();
+crust.prototype.crustPrice = function() {
+    if (this.crustName === "cheese") {
+        // alert("cheese");
+        return 100;
+    } else if (this.crustName === "thin") {
+        return 70;
+    } else if (this.crustName === "neapolitan") {
+        return 120;
+    } else {
+        alert("Please select a prefferable crust to continue");
+    }
+}
 
-// function showSlides() {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   var dots = document.getElementsByClassName("dot");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";  
-//   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {slideIndex = 1}    
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";  
-//   dots[slideIndex-1].className += " active";
-//   setTimeout(showSlides, 2000); // Change image every 2 seconds
-// }
+function topping(name) {
+    this.toppingName = name;
+}
+
+topping.prototype.toppingPrice = function() {
+    if (this.toppingName === "Pepperoni") {
+        return 10;
+    } else if (this.toppingName === "Mushrooms") {
+        return 40;
+    } else if (this.toppingName === "Onions") {
+        return 15;
+    } else if (this.toppingName === "Sausage") {
+        return 20;
+    } else if (this.toppingName === "Bacon") {
+        return 30;
+    } else if (this.toppingName === "Extra-cheese") {
+        return 10;
+    } else if (this.toppingName === "Black-olives") {
+        return 15;
+    } else if (this.toppingName === "Green-peppers") {
+        return 5;
+    } else {
+        alert("Please choose topping(s) of your choice");
+    }
+}
+
+
+
+
+
+
+$(document).ready(function() {
+    $("#checkout").click(function() {
+        event.preventDefault();
+        // alert("Akii fanya tuu!");
+
+    var sizeInput = $("#size").val();
+
+    var pizzaSize = new size(sizeInput);
+        pizzaSize.priceSize();
+        alert(pizzaSize.priceSize());
+
+    var crustInput = $("#crust").val();
+    
+    var crustSize = new crust(crustInput);
+        crustSize.crustPrice();
+        alert(crustSize.crustPrice());
+
+
+    var toppingInput = $("#toppings").val();
+
+    var toppingSize = new topping(toppingInput);
+        toppingSize.toppingPrice();
+        alert(toppingSize.toppingPrice());
+    });
+})
+
+
