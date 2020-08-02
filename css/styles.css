@@ -26,11 +26,6 @@ li > a:hover {
     color: red;
 }
 
-#mouse-click {
-    margin-top: 460px;
-    padding-left: 50%;
-}
-
 .pizza-waver {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../assets/backgrounds/pizza-waver.jpg");
     background-position: center;
@@ -71,12 +66,13 @@ p {
     margin-top: 210px;
     margin-left: 46%;
 }
+
 .welcome {
     margin-top: 240px;
 }
 
 .form-control {
-    width: 240px;
+    width: 300px;
 }
 
 .waver {
