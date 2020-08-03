@@ -1,3 +1,6 @@
+
+
+
 function size(name) {
     this.sizeName = name;
 }
@@ -59,6 +62,39 @@ topping.prototype.toppingPrice = function() {
     }
 }
 
+function pizza(name) {
+    this.pizzaName = name;
+}
+
+pizza.prototype.nameSize = function() {
+    if (this.pizzaName === "Chicken Hawaiian.") {
+        return "Chicken Hawaiian.";
+    }else if(this.pizzaName === "Cheese Burger.") {
+        return "Cheese Burger.";
+    }else if(this.pizzaName === "Meat Deluxe.") {
+        return "Meat Deluxe.";
+    }else if(this.pizzaName === "Chicken Macon BBQ.") {
+        return "Chicken Macon BBQ.";
+    }else if(this.pizzaName === "Chicken & Beef Pepperoni.") {
+        return "Chicken & Beef Pepperoni.";
+    }else if(this.pizzaName === "Veg Feast.") {
+        return "Veg Feast.";
+    }else if(this.pizzaName === "Roast Veg & Feta.") {
+        return "Roast Veg & Feta.";
+    }else if(this.pizzaName === "Spicy Boerewors.") {
+        return "Spicy Boerewors.";
+    }else {
+        alert("Please select a pizza type to continue");
+    };
+}
+
+function quantity(name) {
+    this.quantityName = name;
+}
+
+quantity.prototype.quantityPrice = function() {
+
+}
 
 
 
@@ -67,27 +103,59 @@ topping.prototype.toppingPrice = function() {
 $(document).ready(function() {
     $("#checkout").click(function() {
         event.preventDefault();
-        // alert("Akii fanya tuu!");
+
+        
+    var pizzaInput = $("#type").val();
+
+        pizzaSelect = new pizza(pizzaInput);
+        pizzaSelect.nameSize();
+        // alert(pizzaSelect.nameSize());
 
     var sizeInput = $("#size").val();
 
     var pizzaSize = new size(sizeInput);
         pizzaSize.priceSize();
-        alert(pizzaSize.priceSize());
+        // alert(pizzaSize.priceSize());
 
     var crustInput = $("#crust").val();
     
     var crustSize = new crust(crustInput);
         crustSize.crustPrice();
-        alert(crustSize.crustPrice());
+        // alert(crustSize.crustPrice());
 
 
     var toppingInput = $("#toppings").val();
 
     var toppingSize = new topping(toppingInput);
         toppingSize.toppingPrice();
-        alert(toppingSize.toppingPrice());
+        // alert(toppingSize.toppingPrice());
+
+
+    var quantityInput = $("quantity").val();
+
+    var  quantitySize = new quantity (quantityInput);
+         quantitySize.quantityPrice();
+        //  alert(quantitySize.quantityPrice());
+
+   // calcTotal to calculate the total pizza summation
+
+    var pizzaPrice = (parseInt(parseInt(pizzaSize.priceSize()) + parseInt(crustSize.crustPrice()) + parseInt(toppingSize.toppingPrice())));
+    $("#summation").append(pizzaPrice);
+
+    // S-size, C-crust, T-toppings N-name
+
+    var pizzaS = (pizzaSize.priceSize());
+    $("#psize").append(pizzaS);
+
+    var pizzaC = (crustSize.crustPrice());
+    $("#cprice").append(pizzaC);
+
+    var pizzaT = (toppingSize.toppingPrice());
+    $("#tprice").append(pizzaT);
+
+    var pizzaN = (pizzaSelect.nameSize());
+    $("#ptype").append(pizzaN);
+    event.preventDefault();
     });
 })
-
 
