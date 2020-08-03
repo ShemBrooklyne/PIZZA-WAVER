@@ -97,11 +97,21 @@ quantity.prototype.quantityPrice = function() {
 
 }
 
+$(document).ready(function() {
+    $("#delivery").click(function() {
+        alert("For to door deliveries. Please confirm by pressing ok to continue");
+        prompt("Please Enter your mobile number");
+        prompt("Enter your current location");
+    });
+});
+
 
 
 $(document).ready(function() {
     $("#checkout").click(function() {
         event.preventDefault();
+
+
 
 
     var pizzaInput = $("#type").val();
@@ -155,6 +165,7 @@ $(document).ready(function() {
     var pizzaN = (pizzaSelect.nameSize());
     $("#ptype").append(pizzaN);
     event.preventDefault();
+    
     });
 })
 
