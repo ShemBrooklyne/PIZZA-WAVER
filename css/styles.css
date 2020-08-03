@@ -277,7 +277,11 @@ p {
 
 .summation {
   background-color: white;
-  height: 210px;
+  height: 260px;
+}
+
+.delivery {
+  color: red;
 }
 
 
