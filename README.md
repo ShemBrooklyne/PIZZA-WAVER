@@ -13,7 +13,7 @@ Pizza Deli is a website that brings to you Pizza Waver which is a user interacti
 
 - To have a copy of the website.
 You might just as well:
-1. Visit link
+1. Visit https://github.com/ShemBrooklyne/PIZZA-WAVER
 2. Clone the repository to your local machine.
 3. Run the terminal and run "git clone"
 4. Then open the index.html
