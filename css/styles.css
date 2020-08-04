@@ -41,6 +41,11 @@ h1 {
     font-size: 78px;
 }
 
+h3 {
+  font-family: 'Ultra', serif;
+  
+}
+
 .orders {
     height: 620px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url("../assets/backgrounds/What-are-your-orders.jpg");
